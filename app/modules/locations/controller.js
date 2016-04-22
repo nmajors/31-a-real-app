@@ -1,20 +1,30 @@
 class LocationsController {
-  constructor($state, LocationsService) {
+  constructor($state, UserService, LocationsService, $firebaseArray) {
     this._$state = $state;
     this._LocationsService = LocationsService;
+    this._UserService = UserService;
+    this.newLocation = this._LocationsService.new();
+    // this.locations = this._LocationsService.getLocation()
+    // this.locations = [];
+    // this.locations = $firebaseArray(this.ref);
+    // this.items = [];
 
-    this._LocationsService
+    // this.user ={};
+
+    this._UserService
     .isLoggedIn()
     .then((response) => {
       this.user = response;
-      console.log(this.user);
+      this.locations = this._LocationsService.getLocation(this.user);
     })
     .catch((error) => {
       this._$state.go("login");
     });
   }
 
-
+  addLocation() {
+    this._LocationsService.createLocation(this.newLocation);
+  }
 
 
 

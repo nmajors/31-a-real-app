@@ -1,1 +1,31 @@
-<h1>i'm in your locations</h1>
+<div class="page">
+  <h1>Your Locations</h1>
+<div class="locations">
+
+<form ng-submit="locationsCtrl.addLocation()">
+  <input type="text" placeholder="address" ng-model="locationsCtrl.newLocation.address">
+  <input type="text" placeholder="city" ng-model="locationsCtrl.newLocation.city">
+  <input type="text" placeholder="state" ng-model="locationsCtrl.newLocation.state">
+
+
+  <input type="submit" value="Add Location">
+
+</form>
+</div>
+
+<ng-map class="map" center="current" zoom="8">
+    <!-- <marker position="current" animation="Animation.DROP" centered="true"></marker> -->
+  <marker ng-repeat="location in locationsCtrl.locations" id="marker_{{ $index }}" position="{{ location.address }}, {{ location.city }}, {{ location.state }}" on-click="map.showInfoWindow('info_{{ $index }}')">
+
+  </marker>
+
+      <info-window ng-repeat="location in locationsCtrl.locations" id="info_{{ $index }}">
+        <div ng-non-bindable>
+          {{ location.address }}
+          {{ location.city }}
+          {{ location.state }}
+        </div>
+
+      </info-window>
+</ng-map>
+</div>

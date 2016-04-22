@@ -1,4 +1,7 @@
 <div class="profile">
   <h1>Email: <span> {{ profileCtrl.user.password.email }}</span></h1>
-  <button ng-click="profileCtrl.logout()">Logout</button>
+
+  <a ui-sref="locations"><button>Go to My Locations</button></a>
+  <input type="submit" ng-click="profileCtrl.logout()" value="Logout">
+
 </div>
