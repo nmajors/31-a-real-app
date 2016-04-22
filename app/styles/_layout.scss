@@ -1,0 +1,43 @@
+
+.login, .register, .profile{
+  width: 30%;
+  margin: 30px auto;
+  text-align: center;
+  span{
+    font-weight: normal;
+  }
+  input, button{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+  input[type="submit"], button{
+    box-shadow: 2px 2px 6px 0 #253e66;
+    background: linear-gradient(to bottom, #ef6555 0, #ce2c1a 100%);
+    text-shadow: #0d2344 1px 1px 2px;
+    color: white;
+    border: none;
+    padding: 2px 10px;
+
+    &:hover, &:focus {
+      outline: none;
+      box-shadow: 1px 1px 3px 0 #253e66;
+    }
+    &:active{
+      box-shadow: inset 2px 2px 5px 0 #ce2c1a;
+      border-radius: 2px;
+    }
+  }
+  input[type="submit"]{
+    background: linear-gradient(to bottom, #4b7ecc 0, #253e66 100%);
+    text-shadow: #9b2012 1px 1px 2px;
+
+    &:active{
+      box-shadow: inset 2px 2px 5px 0 #253e66;
+  }
+
+
+}
+}

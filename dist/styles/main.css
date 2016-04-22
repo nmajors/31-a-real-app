@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background-color: #eee; }
+
+.login, .register, .profile {
+  width: 30%;
+  margin: 30px auto;
+  text-align: center; }
+  .login span, .register span, .profile span {
+    font-weight: normal; }
+  .login input, .login button, .register input, .register button, .profile input, .profile button {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 2px; }
+  .login input[type="submit"], .login button, .register input[type="submit"], .register button, .profile input[type="submit"], .profile button {
+    box-shadow: 2px 2px 6px 0 #253e66;
+    background: linear-gradient(to bottom, #ef6555 0, #ce2c1a 100%);
+    text-shadow: #0d2344 1px 1px 2px;
+    color: white;
+    border: none;
+    padding: 2px 10px; }
+    .login input[type="submit"]:hover, .login input[type="submit"]:focus, .login button:hover, .login button:focus, .register input[type="submit"]:hover, .register input[type="submit"]:focus, .register button:hover, .register button:focus, .profile input[type="submit"]:hover, .profile input[type="submit"]:focus, .profile button:hover, .profile button:focus {
+      outline: none;
+      box-shadow: 1px 1px 3px 0 #253e66; }
+    .login input[type="submit"]:active, .login button:active, .register input[type="submit"]:active, .register button:active, .profile input[type="submit"]:active, .profile button:active {
+      box-shadow: inset 2px 2px 5px 0 #ce2c1a;
+      border-radius: 2px; }
+  .login input[type="submit"], .register input[type="submit"], .profile input[type="submit"] {
+    background: linear-gradient(to bottom, #4b7ecc 0, #253e66 100%);
+    text-shadow: #9b2012 1px 1px 2px; }
+    .login input[type="submit"]:active, .register input[type="submit"]:active, .profile input[type="submit"]:active {
+      box-shadow: inset 2px 2px 5px 0 #253e66; }
